@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="keywords" content="瀧川,一学,瀧川一学,Ichigaku,Takigawa" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Ichigaku Takigawa Lab</title>
+<!-- TemplateEndEditable -->
+<link href="css/i.css" rel="stylesheet" type="text/css" />
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-62183196-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+<body>
+<div id="container">
+  <div id="header">
+    <ul>
+      <!-- TemplateBeginEditable name="menu" -->
+        <li><a href="index.html">About</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="course.html">Courses</a></li>
+        <li><a href="note.html">Notes</a></li>
+        <!-- TemplateEndEditable -->
+    </ul>
+<div id="logo"><a href="../index.html"><img src="images/sitelogo.png" width="433" height="66" alt="Ichigaku Takigawa" /></a></div>
+  </div>
+  <!-- TemplateBeginEditable name="lang" -->
+  <div id="lang">
+    <ul>
+      <li class="active">English</li>
+      <li><a href="index_j.html">Japanese</a></li>
+    </ul>
+  </div>
+  <!-- TemplateEndEditable -->
+  <!-- TemplateBeginEditable name="main" -->
+  <div id="main"></div>
+  <!-- TemplateEndEditable -->
+  <div id="footer"> 
+    <span id="name">Ichigaku Takigawa</span> | Associate Professor<br />
+    6-16 Grad School of Info Sci and Tech, Hokkaido University<br />
+    N14, W9, Kita-ku, Sapporo, Hokkaido 060-0814, Japan
+  </div>
+</div>
+</body>
+</html>

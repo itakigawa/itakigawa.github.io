@@ -1,0 +1,355 @@
+@charset "UTF-8";
+
+*html body { /* for IE6 */
+	overflow-y: auto;
+}
+
+*+html body { /* for IE7 */
+	overflow-y: auto;
+}
+
+body {
+	overflow-y: scroll;
+}
+
+body,td,th {
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	background-color: #CCCCCC;
+	background-repeat: repeat-x;
+	font-size: 11px;
+}
+table, tr, td {
+	background-color:#fff;
+	border:none;
+}
+#container {
+	background-color: #FFF;
+	width: 790px;
+	padding: 0px;
+	float: none;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	border-top-width: 10px;
+	border-bottom-width: 10px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #CC0;
+	border-bottom-color: #4c4c4c;
+}
+#header {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #999;
+	margin-top: 20px;
+	margin-right: 20px;
+	margin-left: 20px;
+	padding-bottom: 20px;
+}
+#header li {
+	display: inline;
+}
+#header li.active {
+	margin-left: 8px;
+	padding-top: 6px;
+	padding-right: 6px;
+	padding-bottom: 6px;
+	padding-left: 6px;
+	border: 1px solid #333;
+	text-decoration: none;
+	color: #FFF;
+	background-color: #4c4c4c;
+}
+#header li a {
+	margin-left: 8px;
+	padding-top: 6px;
+	padding-right: 6px;
+	padding-bottom: 6px;
+	padding-left: 6px;
+	border: 1px solid #999;
+	text-decoration: none;
+	color: #333;
+}
+#header li a:hover {
+	background-color: #3399CC;
+	color: #FFF;
+	border-top-color: #39C;
+	border-right-color: #39C;
+	border-bottom-color: #39C;
+	border-left-color: #39C;
+}
+#header ul {
+	float: right;
+	text-align: right;
+	list-style-type: none;
+	margin: 0px;
+	padding: 7px;
+	width: 300px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+}
+#footer {
+	margin-right: 20px;
+	margin-left: 20px;
+	padding-top: 8px;
+	padding-bottom: 30px;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #999;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 10px;
+	color: #666;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+#footer #name {
+	font-weight: bold;
+}
+#lang {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	text-align: right;
+	margin-right: 20px;
+}
+#lang li {
+	display: inline;
+}
+#lang li.active {
+}
+#lang li a {
+	margin-left: 5px;
+	padding-top: 2px;
+	padding-right: 5px;
+	padding-bottom: 2px;
+	padding-left: 5px;
+	color: #999;
+	text-decoration: none;
+}
+#lang li a:hover {
+	color: #F00;
+}
+#logo {
+	margin-right: 300px;
+}
+#logo a img {
+	text-decoration: none;
+	border: none;
+}
+#main {
+	padding: 0px;
+	margin-top: 5px;
+	margin-right: 20px;
+	margin-bottom: 5px;
+	margin-left: 20px;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	font-size: 12px;
+}
+.nonsp{
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+#slogan{
+	padding-left: 20px;
+}
+#main ul {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+#main a {
+	color: #04c;
+}
+#main h3 {
+	font-size: 12px;	
+}
+
+.lphoto {
+	float: left;
+	margin-right: 20px;
+	width:260px;
+}
+
+.item {
+	background:url(../images/bg.png);
+	border: 1px solid #999;
+	margin-top: 5px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	padding: 10px;
+}
+
+.item li {
+	list-style-type: square;
+	list-style-position: outside;
+	margin-left: 20px;
+	margin-bottom: 5px;
+}
+
+.item-none {
+	margin-top: 5px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	padding: 10px;
+}
+
+.gallery a img {
+	margin: 0px;
+	padding: 1px;
+	border: 1px solid #999;
+	text-decoration: none;
+}
+
+.block:after,
+.item:after,
+.item-none:after,
+#main:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+img.right {
+	background-color: #fff;
+	float: right;
+	border: 1px solid #999;
+	margin-left: 15px;
+	margin-bottom: 10px;
+	padding: 10px;
+}
+
+img.right2 {
+	background-color: #fff;
+	border: none;
+	padding: 10px;
+	text-align: center;
+}
+
+#info {
+	font-family: Verdana, Geneva, sans-serif;
+	float:left;
+	width:470px;
+}
+#info h2 {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 18px;
+}
+#info h3 {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+}
+#info li {
+	list-style-position: outside;
+	list-style-type: square;
+	line-height: 20px;
+	margin-bottom: 5px;
+	margin-left: 20px;
+}
+
+.unit {
+	margin-bottom: 24px;
+	width: 390px;
+}
+.unit h3 {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 14px;
+	padding: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 12px;
+	margin-left: 0px;
+	font-weight: bold;
+	color: #4c4c4c;
+}
+.unit p {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	color: #666;
+}
+.unit li {
+	list-style-type: square;
+	list-style-position: outside;
+	margin-left: 20px;
+	margin-bottom: 5px;
+}
+
+#lf {
+	height: 80px;
+	width: 70px;
+	float: left;
+}
+
+#rf {
+	height: 80px;
+	width: 600px;
+	float: left;
+}
+
+.clear {
+	clear: both;
+}
+
+.hd1 {
+	padding-bottom: 8px;
+}
+.hd2 {
+	padding-left: 10px;
+}
+
+#gmap {
+	height: 650px;
+	width: 500px;
+}
+
+.spacer {
+	height: 5px;
+}
+
+.ptitle{
+	font-weight: bold;
+	color: #000;
+	font-size: 12px;
+}
+
+.pauthor{
+	font-size: 12px;
+	color: #666;
+}
+
+#main .pjname{
+	color: #069;
+}
+
+#main .doi a:link, #main .doi a:visited, #main .doi a:active {
+	color: #993;
+	text-decoration:none;
+	font-weight: bold;
+}
+#main .doi a:hover {
+	color: #F00;
+	text-decoration:underline;
+}
+
+#main .pjname .jname {
+	font-style: italic;
+}
+
+#main .pauthor .mine{
+	color: #F09;
+}
+
+#clicky {
+	text-align: right;
+}
+
+.sitem {
+	margin-top: 0px;
+	margin-right: 20px;
+	margin-left: 20px;
+	padding: 0px;
+}
