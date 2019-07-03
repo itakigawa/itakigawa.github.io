@@ -335,6 +335,16 @@ img.right2 {
 	text-decoration:underline;
 }
 
+a.alink:link, a.alink:visited, a.alink:active {
+	color: #309;
+	text-decoration:none;
+}
+a.alink:hover {
+	color: #F00;
+	text-decoration:underline;
+}
+
+
 #main .pjname .jname {
 	font-style: italic;
 }
