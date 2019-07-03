@@ -1,0 +1,107 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#outline {
+	position: relative;
+	height: 900px;
+	width: 800px;
+	border: solid 1px #999;
+	margin-top: 14px;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+}
+#outline2 {
+	position: relative;
+	height: 1000px;
+	width: 800px;
+	border: solid 1px #999;
+	margin-top: 14px;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+}
+#menu {
+	width: 160px;
+	top: 150px;
+	position: absolute;
+	visibility: visible;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bolder;
+}
+#text {
+	left: 200px;
+	top: 150px;
+	position: absolute;
+	width: 580px;
+	visibility: visible;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+#menu ul li {
+	margin-bottom: 18px;
+}
+#text ul li {
+	margin-bottom: 12px;
+}
+a {
+	color: #000;
+}
+a:visited {
+	color: #F09;
+}
+img.fr {
+	border: 2px solid #FFF;
+}
+#clicky {
+	text-align: right;
+}
+#day{
+	margin-left: 20px;	
+}
+b.pink {
+	color: #F09;
+}
+span.name {
+	color: #000;
+	font-weight: bold;
+}
+span.event {
+	color:#666;
+}
+span.title {
+	color: #069;
+	font-weight: bold;
+}
+
+table.program {
+    border-top:1px solid #663300;
+    border-bottom:1px solid #663300;
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+tr.tblock {
+	border-top:1px solid #663300;
+}
+
+table.program thead tr th {
+	background-color: #E6E6E6
+}
+
+table.program tbody tr th {
+	background-color: #E6E6E6
+}
+
+table.program tbody tr td.stalk {
+	padding: 5px;
+	vertical-align: top;
+	background-color: #D5DFE8
+}
+
+table.program tbody tr td.talk {
+	padding: 5px;
+	vertical-align: top;
+	background-color: #D4E7EC
+}

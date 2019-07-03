@@ -1,0 +1,72 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#outline {
+	position: relative;
+	height: 900px;
+	width: 800px;
+	border: solid 1px #999;
+	margin-top: 14px;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+}
+#outline2 {
+	position: relative;
+	height: 1700px;
+	width: 800px;
+	border: solid 1px #999;
+	margin-top: 14px;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+}
+#menu {
+	width: 160px;
+	top: 150px;
+	position: absolute;
+	visibility: visible;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bolder;
+}
+#text {
+	left: 200px;
+	top: 150px;
+	position: absolute;
+	width: 580px;
+	visibility: visible;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+#menu ul li {
+	margin-bottom: 18px;
+}
+#text ul li {
+	margin-bottom: 12px;
+}
+a {
+	color: #000;
+}
+a:visited {
+	color: #F09;
+}
+img.fr {
+	border: 2px solid #FFF;
+}
+#clicky {
+	text-align: right;
+}
+#day{
+	margin-left: 20px;	
+}
+b.pink {
+	color: #F09;
+}
+span.name {
+	color: #06C;
+	font-weight: bold;
+}
+span.event {
+	color:#666;
+}
