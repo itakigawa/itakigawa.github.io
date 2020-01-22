@@ -1,0 +1,7 @@
+SSLRequireSSL
+AuthUserFile /home/takigawa/admin/.htpasswd2016
+AuthGroupFile /dev/null
+AuthName "Data Analysis 2016"
+AuthType Basic
+require valid-user
+
