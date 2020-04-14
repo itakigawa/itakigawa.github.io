@@ -1,0 +1,8 @@
+import tkinter.messagebox as mb
+
+ans = mb.askyesno('質問', '今日は朝ごはんを食べましたか？')
+
+if ans == True:
+    mb.showinfo('メッセージ', 'ナイス朝ごはん！')
+else:
+    mb.showinfo('メッセージ', 'ノー朝ごはん！')
