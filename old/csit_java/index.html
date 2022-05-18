@@ -1,0 +1,101 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  </head>
+  <body>
+    <h1>情報理工学実験I</h1>
+
+    <h2>オブジェクト指向プログラミング</h2>
+
+    <h3>担当</h3>
+    <ul>
+     <li>講師: <a href="http://art.ist.hokudai.ac.jp/~takigawa/index_ja.html">瀧川 一学</a> (<a href="http://art.ist.hokudai.ac.jp/">大規模知識処理</a>)</li>
+     <li>TA: 菊地 翔馬(M1), 白川 稜(M1), 髙橋 翔哉(M1)</li>
+     <li>場所: <a href="https://www-iec.eng.hokudai.ac.jp/">計算機室</a> M152</li>
+    </ul>
+
+    <h3>出席コマンド (出席のユーザIDと日時時刻が記録されます)</h3>
+    <p>$ /home/work/takigawa/attend_now</p>
+    <p>出席: <a href="shusseki_20180406Fri.txt">Apr 6</a> <a href="shusseki_20180410Tue.txt">Apr 10</a> <a href="shusseki_20180411Wed.txt">Apr 11</a> <a href="shusseki_20180413Fri.txt">Apr 13</a> <a href="shusseki_20180417Tue.txt">Apr 17</a> <a href="shusseki_20180418Wed.txt">Apr 18</a> </p>
+
+  <h3>レポート〆切・提出先</h3>
+
+  <p>〆切: 2018年4月23日(月) 午後5:00</p>
+  <p>提出先: 情報科学研究科 6F 6-16室ドアポスト</p>
+  <p>ソースコード等の別途提出: ソースコード等はレポートに電子的に提出することを明記し、java @ art.ist.hokudai.ac.jp まで提出。提出方式が統一されていないと確認が大変かつ見逃しが生じる恐れがあるため、レポート本体のメール提出は認めていないので注意。</p>
+
+  <p>実験レポート表紙データ(情報が載ってればこの様式でなくてもOKだけど): <a href="coverpage.pdf">pdf</a> <a href="coverpage.docx">Word形式</a><p>
+
+  <h3>訂正や補足</h3>
+
+    <p>ここに訂正や補足などを随時記載します!</p>
+
+    <ul>
+     <li>3.1節 例年，Eclipseを最初に起動した時，数分程度フリーズする事態が見られます．システム上の問題なので画面が固まっても数分実習書でも読んで待ってみてください</li>
+     <li>課題1.2 「実行時引数」の処理について、ここではString[] argsで受け取った実行時引数をArrayListに一旦格納し逆順で出力するだけで構わない。余裕があれば、TestArrayListを真似て「Collections.reverse」を試してみても良いです。</li>
+     <li>Test2.javaのクラス名がTest3になっていました。(修正済)</li>
+     <li>Scannerで入力を取る行を加えたら動かなくなったという人は4.6節最後の「注意!System.in にひもづいた java.util.Scanner の close」をチェックしてみてください。System.inからのScannerは何度生成しても構わない(恐ろしいことに)ので、この演習ではとりあえずcloseしないということでOKです。ちなみに、ちゃんとやるにはSystem.inに紐づいたScannerインスタンスが<a href="https://ja.wikipedia.org/wiki/Singleton_パターン">実行中に一つだけ生成される</a>よう設計する必要があります。</li>
+     <li>課題1.5 「ここを埋める」の箇所を適切に記述し，となっていますが，必要に応じてそれ以外の箇所も変更して構いません．課題としては単純にじゃんけんの勝ち負けを判定する部分を愚直に書くだけでここでは十分ですが，ほかにも手を入れてより見通しの良いコードにするアイデアやスキルがある人はどんどんチャレンジしてください．
+    </ul>
+
+    <h2>実験書(PDF)</h2>
+    <ul>
+      <li><a href="ver_20180410.pdf">Version 20180410</a></li>
+    </ul>
+
+    <h2>Java APIリファレンス (実験書 4.2-4.3節参照)</h2>
+    <ul>
+      <li><a href="http://docs.oracle.com/javase/jp/8/docs/api/">http://docs.oracle.com/javase/jp/8/docs/api/</a></li>
+    </ul>
+
+    <h2>参考情報 (実験書 付録参照)</h2>
+    <ul>
+      <li><a href="https://docs.oracle.com/javase/tutorial/">Java公式ドキュメント</a></li>
+      <li><a href="http://www.oracle.com/technetwork/jp/java/index.html">日本語のJava公式ドキュメント</a></li>
+      <li><a href="http://www.atmarkit.co.jp/fjava/index/index_java5eclipse.html">Eclipseではじめるプログラミング</a></li>
+    </ul>
+
+    <hr>
+
+    <h2>実験書のソースコードファイル</h2>
+    <ul>
+      <li><a href="HelloWorld.java">HelloWorld.java</a></li>
+      <li><a href="HelloWorld2.java">HelloWorld2.java</a></li>
+      <li><a href="TestArray.java">TestArray.java</a></li>
+      <li><a href="TestArray2.java">TestArray2.java</a></li>
+      <li><a href="TestArrayList.java">TestArrayList.java</a></li>
+      <li><a href="TestString.java">TestString.java</a></li>
+      <li><a href="TestCalendar1.java">TestCalendar1.java</a></li>
+      <li><a href="TestCalendar2.java">TestCalendar2.java</a></li>      
+      <li><a href="TestInput.java">TestInput.java</a></li>      
+      <li><a href="Hand.java">Hand.java</a></li>
+      <li><a href="A.java">A.java</a></li>
+      <li><a href="Test0.java">Test0.java</a></li>
+      <li><a href="B.java">B.java</a></li>
+      <li><a href="Test1.java">Test1.java</a></li>
+      <li><a href="C.java">C.java</a></li>
+      <li><a href="Test2.java">Test2.java</a></li>
+      <li><a href="RandomJankenPlayer.java">RandomJankenPlayer.java</a></li>
+      <li><a href="Judge.java">Judge.java</a></li>
+      <li><a href="ClassA.java">ClassA.java</a></li>
+      <li><a href="ClassB.java">ClassB.java</a></li>      
+      <li><a href="JankenPlayerTypeB.java">JankenPlayerTypeB.java</a></li>
+      <li><a href="NameAvailable.java">NameAvailable.java</a></li>
+      <li><a href="TestInf.java">TestInf.java</a></li>
+      <li><a href="Result.java">Result.java</a></li>
+      <li><a href="Judge2.java">Judge2.java</a></li>            
+    </ul>
+    <p>付録:</p>
+    <ul>
+      <li><a href="TestTypes.java">TestTypes.java</a></li>
+      <li><a href="TestFileIO1.java">TestFileIO1.java</a></li>
+      <li><a href="TestFileIO2.java">TestFileIO2.java</a></li>
+      <li><a href="TestPackage.java">TestPackage.java</a></li>
+      <li><a href="TestHashMap.java">TestHashMap.java</a></li>
+    </ul>
+
+    <hr>
+    Ichigaku Takigawa
+
+  </body>
+</html>

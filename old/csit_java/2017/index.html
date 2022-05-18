@@ -1,0 +1,156 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  </head>
+  <body>
+    <h1>情報理工学実験I</h1>
+    <h2>オブジェクト指向プログラミング</h2>
+
+    <h2>レポートについて</h2>
+      <li>1.3節に「実行結果、解析、考察をレポートにまとめ」と書いてありますが、すべての課題に解析・考察が必要なわけではありません。考えたことを自由に付記してくれたほうがレポートとしては良いですが、「解析せよ、考察せよ」という指定がない課題でも何か言わないといけないということはありません。</li>
+
+    <h2>補足</h2>
+    <ul>
+      <li>課題1.2: Javaではmainメソッドは「public static void main(String[] args)」という部分は変えられません。例えば「main(int[] array)」にするとエラーになります。</li>
+      <li>課題1.2: Javaでは配列でもできますがArrayListを使ってみる課題です。ArrayList&lt;String&gt;でかまいませんが、文字列(String)をint型に変えたい場合はInteger.parseIntなど<br>
+String s = "11";<br>
+int i = Integer.parseInt(s);
+</li>
+      <li>
+	課題1.5: 作業1.9のカプセル化を行ったRandomJankenPlayerを用いる場合、playメソッド中のplayer1.nameをplayer1.getName()に書き換えるなど、適宜必要な書き換えを行ってください。
+      </li>
+      <li>
+	Javaでも四則演算の結果は同じ型にキャストされるので、整数(int型)同士の除算結果は整数(int型)になるので注意してください。下記参照(最初の結果は0になります)。<br>
+	class Test {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;public static void main(String[] args){<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    System.out.println(1/3);     // int<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    System.out.println(1.0/3.0); // double<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    System.out.println(1f/3f);   // float<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    System.out.println(1d/3d);   // double<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+}
+      </li>
+      <li>
+	課題1.7: 3つ目の要件ですが、RandomJankenPlayerはそのままではString nameというフィールドしか持っていませんが、これに加えて、自分自身の勝ち数、負け数、引き分け数のフィールド(例えば int n_win, n_lose, n_drawなど?)を持つようにするという意味です。Judgeのplayメソッドで実際にじゃんけんした後、Judgeは各々のプレイヤに勝ち・負け・引き分けを教えて、各プレイヤは教えてもらった結果に応じて適宜フィールドの値を増やすようにします。(カプセル化するならgetNWin(), getNLose(), getNDraw()とかのメソッド経由で値にアクセスできるようにします)
+      </li>
+      <li>
+	p.33 ソースコード1.19: setNameメソッドが間違えています。正しくは下記。<br>
+	public void setName(String name){<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;this.name = name;<br>
+	}
+      </li>
+      <li>
+	p.33 ソースコード1.19: String scannerは「Scanner scanner」の間違いです。「import java.util.Scanner;」があることを想定しています。p.16参照のこと
+      </li>
+      <li>
+	p.33 ソースコード1.19: 表示上二つのpublic classが一つのファイルに書いてあるように見えますが、複数のclassを一つのファイルに書くと基本怒られるので、実際にはクラスごとに一つのjavaファイルに書いてください。また、コード中のgetNWin(), getNLose(), getNDraw()はプレイヤから勝ち数・負け数・引き分け数を取得するgetterのつもりですが、こういう名前でなくても全く構いません。
+      </li>
+      <li>
+	課題1.9: 「暗黙的スーパー・コンストラクターは未定義です」が出る場合。継承された子クラスのコンストラクタの一行目では何も書かなくても親クラスのコンストラクタが実行されます。引数のあるコンストラクタしか定義していない場合、子クラスのコンストラクタの一行目で明示的にsuper(引数)を呼び出さない限り、super()が「暗黙のうちに」実行されるため親クラスに引数のないコンストラクタを定義する必要があります。何も処理のないそのようなクラスを親クラスに定義すれば解決できます(super(引数)を1行目で実行できない場合)。
+      </li>
+      <li>
+	課題1.9: 入出力については「4.6 標準入力」「付録4」(try-catch構文など)も参考にしてください。ScannerクラスやStringクラスのAPIも併せてチェックしてください。try〜catchした際に、catch部に何も書かれていないと、エラーがわからないので、試行錯誤中は下記のように出たエラーをそのままプリントするようにしておくとデバッグ時に有用かもしれません。<br>
+	try{<br>
+	&nbsp;&nbsp;&nbsp;&nbsp...<br>
+	}<br>
+	catch(Exception e){<br>
+        &nbsp;&nbsp;&nbsp;&nbsp System.err.println("なにかエラーメッセージをここに") ;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp e.printStackTrace() ;<br>
+        }
+      </li>
+      <li>
+	課題1.10: この課題の(隠れた)テーマは「多態性」です。「Hand showHand()」という使われ方は変えずにshowHandの中でランダム戦略か相手の手を出す戦略かをどう切り替えるか考えてください。ヒント：次にshowHandが呼ばれた時どちらのモードで出すか、どんな手を出すか、などの必要な情報は、課題1.7の3つめの項目と同じく「フィールド」の値としてインスタンス自身が保持する必要があるでしょう。
+      </li>
+      <li>
+	課題1.10: 「JankenPlayerTypeA、JankenPlayerTypeB、RandomJankenPlayerを戦わせ」とありますが、最低限JankenPlayerTypeAとRandomJankenPlayerを対戦させればOKです。余力がある人は全組合せ対戦させてみて確認すれば加点します。じゃんけんプレイヤーが「部品」化されていれば少しコードを変更するだけでこれが可能なのはオブジェクト指向の利点の一つです。
+      </li>
+      <li>
+	課題1.10: 最後の文「二回連続で敗れたとき、手が変わっていることも合わせて確認すること」の意味ですが、RandomJankenPlayerTypeAが負け続ける限り、出す手が一意に決まるので、連続で負けてもランダム戦略に戻らず、ちゃんと前回敗れた手を出すことを確認する(RandomJankenPlayerTypeAがちゃんと動くことを確認する)、という意味です。
+      </li>
+      <li>
+	課題*1.11: 「直前n回」と「直前n-1回」が混在しているのはミスです。適宜どちらかに読み替えて下さい。
+      </li>
+      <li>
+	課題1.12: この課題はいままで作ってきたプログラムを抽象クラスを用いて書き直す趣旨なので、書き直したクラスをJudgeで対戦(play)させる際は、任意の二人を選んで対戦させてください。(複数人でのじゃんけん対戦は次の1.13の内容としています)
+      </li>
+      <li>
+	課題1.12: 親クラスのフィールドをprivateで定義した場合、getter/setterも親クラスに作っておかないと、子クラスからもそのフィールドにアクセスできなくなります。5.4節の表を参考にしてください。
+      </li>
+      <li>
+	課題1.12: ここでは、クラスJankenPlayerとNameAvailableを両方とも継承(多重継承)したいわけですが、javaでは多重継承そのものはできないため、クラスJankenPlayerを継承しNameAvailableインタフェースも実装する形で分けて実現します。インタフェースは複数実装できるので例えば下記のようになります (なお実はJava8ではInterfaceが実装を持てるようになり事情がややこしくなっていますがここでは気にしなくて構いません)<br>
+	class MyCustomJankenPlayer extends JankenPlayer implements NameAvailable, MyInterface1, MyInterface2, MyInterface3 {<br>
+	&nbsp;&nbsp;&nbsp;&nbsp...<br>
+}
+      </li>
+      <li>
+	課題1.12: 後半ですが、JudgeクラスもNameAvailableインタフェースを実装するよう(getName()を実装するよう)書き換え、実際にJudgeクラスでじゃんけん(play)させるとき、メンバーリストの表示の有無を選択できるようにする、という意味です。文字列の配列やArrayListのアルファベット順のソートの仕方はGoogleってください。(やり方はいろいろありますがjava.util.Collections.sortを使うとかです)
+      </li>
+      <li>
+	課題1.13: 最初に提供されていたJudge2.javaに全員同じ手を出したときに引き分けと判定できない不備がありました。ダウンロードしなおして参考にしてください。一応直したつもりですが、まだ不備があったら教えてください。
+      </li>
+      <li>
+	課題1.13: Judge2.javaは適切に定義されたJankenPlayerクラスを自作しないと実行できません。解析・考察の後、実際に作ってみる際にはJudge2.javaを自分が作成したJankenPlayer用に書き換えてもよいし、その逆でもOKです。具体的には、JankenPlayerクラスは審判から結果(enum Result {WIN, LOSE, DRAW}としている)を教えてもらうメソッドnotifyや勝ち負けなどを印字するreport()や名前を返すgetName()などのメソッドを持っている前提で書かれた参考例です。
+      </li>
+    </ul>
+
+    <h2>実験書(PDF)</h2>
+    <ul>
+      <li><a href="ver20170401.pdf">Version 20170401</a></li>
+    </ul>
+
+    <h2>Java APIリファレンス (実習書 4.2-4.3節参照)</h2>
+    <ul>
+      <li><a href="http://docs.oracle.com/javase/jp/8/docs/api/">http://docs.oracle.com/javase/jp/8/docs/api/</a></li>
+    </ul>
+
+    <h2>参考情報 (実習書 付録参照)</h2>
+    <ul>
+      <li><a href="https://docs.oracle.com/javase/tutorial/">Java公式ドキュメント</a></li>
+      <li><a href="http://www.oracle.com/technetwork/jp/java/index.html">日本語のJava公式ドキュメント</a></li>
+      <li><a href="http://www.atmarkit.co.jp/fjava/index/index_java5eclipse.html">Eclipseではじめるプログラミング</a></li>
+    </ul>
+
+    <hr>
+
+    <h2>実験書のソースコードファイル</h2>
+    <ul>
+      <li><a href="HelloWorld.java">HelloWorld.java</a></li>
+      <li><a href="HelloWorld2.java">HelloWorld2.java</a></li>
+      <li><a href="TestArray.java">TestArray.java</a></li>
+      <li><a href="TestArray2.java">TestArray2.java</a></li>
+      <li><a href="TestArrayList.java">TestArrayList.java</a></li>
+      <li><a href="TestString.java">TestString.java</a></li>
+      <li><a href="TestCalendar1.java">TestCalendar1.java</a></li>
+      <li><a href="TestCalendar2.java">TestCalendar2.java</a></li>      
+      <li><a href="TestInput.java">TestInput.java</a></li>      
+      <li><a href="Hand.java">Hand.java</a></li>
+      <li><a href="A.java">A.java</a></li>
+      <li><a href="Test0.java">Test0.java</a></li>
+      <li><a href="B.java">B.java</a></li>
+      <li><a href="Test1.java">Test1.java</a></li>
+      <li><a href="C.java">C.java</a></li>
+      <li><a href="Test2.java">Test2.java</a></li>
+      <li><a href="RandomJankenPlayer.java">RandomJankenPlayer.java</a></li>
+      <li><a href="Judge.java">Judge.java</a></li>
+      <li><a href="ClassA.java">ClassA.java</a></li>
+      <li><a href="ClassB.java">ClassB.java</a></li>      
+      <li><a href="JankenPlayerTypeB.java">JankenPlayerTypeB.java</a></li>
+      <li><a href="NameAvailable.java">NameAvailable.java</a></li>
+      <li><a href="TestInf.java">TestInf.java</a></li>
+      <li><a href="Result.java">Result.java</a></li>
+      <li><a href="Judge2.java">Judge2.java</a></li>            
+    </ul>
+    <p>付録:</p>
+    <ul>
+      <li><a href="TestTypes.java">TestTypes.java</a></li>
+      <li><a href="TestFileIO1.java">TestFileIO1.java</a></li>
+      <li><a href="TestFileIO2.java">TestFileIO2.java</a></li>
+      <li><a href="TestPackage.java">TestPackage.java</a></li>
+      <li><a href="TestHashMap.java">TestHashMap.java</a></li>
+    </ul>
+
+    <hr>
+    Ichigaku Takigawa
+
+  </body>
+</html>
