@@ -191,6 +191,11 @@ table, tr, td {
 	margin-left: 20px;
 }
 
+.justify {
+  text-align: justify;
+  text-justify: inter-ideograph;
+}
+
 .item {
 	background:url(../images/bg.png);
 	border: 1px solid #999;
