@@ -5,5 +5,29 @@
     margin: 10px 0;
     padding: 10px;
     cursor: pointer;
-  }
-  
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item {
+    flex: 1 1 200px;
+    /* アイテムは伸縮可能で、基本的には200pxの幅を持つ */
+}
+
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .item {
+        flex: none;
+        /* モバイルデバイスではアイテムを縦並びにする */
+    }
+
+    body {
+        font-size: 18px;
+    }
+}
