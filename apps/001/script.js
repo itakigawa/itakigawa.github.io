@@ -1,4 +1,3 @@
-
 // script.js
 document.addEventListener('DOMContentLoaded', () => {
     const fileInput = document.getElementById('fileInput');
@@ -6,6 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const clearButton = document.getElementById('clearButton');
     const showListButton = document.getElementById('showListButton');
     const exportButton = document.getElementById('exportButton');
+    const shuffleButton = document.getElementById('shuffleButton');
+    const classifyButton = document.getElementById('classifyButton');
 
     const wordList = document.getElementById('wordList');
     let words = [];
@@ -16,7 +17,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (file) {
             const reader = new FileReader();
             reader.onload = function(e) {
-                words = e.target.result.split('\n').map(line => line.trim()).filter(line => line.length > 0);
+                const lines = e.target.result.split('\n');
+                // 各単語をオブジェクトとして保存し、selected状態も管理
+                words = lines.map(line => ({ text: line.trim(), selected: false })).filter(word => word.text.length > 0);
                 renderWords();
             };
             reader.readAsText(file);
@@ -24,21 +27,27 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function renderWords() {
-        console.log('called')
         wordList.innerHTML = '';
-        words.forEach((word, index) => {
+        words.forEach((wordObj, index) => {
             const wordDiv = document.createElement('div');
-            wordDiv.classList.add('tile');
-            wordDiv.textContent = word;
+            wordDiv.classList.add('tile1');
+            wordDiv.textContent = wordObj.text;
+            // 選択状態に応じてスタイルを設定
+            wordDiv.className = wordObj.selected ? 'tile2' : 'tile1';
             wordDiv.addEventListener('click', () => {
-                removeWord(index);
+                if (!wordObj.selected) {
+                    wordObj.selected = true;
+                    wordDiv.className = 'tile2';
+                } else {
+                    removeWord(index);
+                }
             });
             wordList.appendChild(wordDiv);
         });
     }
 
     function removeWord(index) {
-        removedWords.push({word: words[index], index});
+        removedWords.push(words[index]);
         words.splice(index, 1);
         renderWords();
     }
@@ -46,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
     undoButton.addEventListener('click', () => {
         if (removedWords.length > 0) {
             const lastRemoved = removedWords.pop();
-            words.splice(lastRemoved.index, 0, lastRemoved.word);
+            words.splice(lastRemoved.index, 0, lastRemoved);
             renderWords();
         }
     });
@@ -59,11 +68,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     showListButton.addEventListener('click', () => {
-        alert(words.join('\n'));
+        alert(words.map(wordObj => wordObj.text).join('\n'));
     });
 
     exportButton.addEventListener('click', () => {
-        const blob = new Blob([words.join('\n')], { type: 'text/plain' });
+        const blob = new Blob([words.map(wordObj => wordObj.text).join('\n')], { type: 'text/plain' }); // textプロパティを使用
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
@@ -74,17 +83,26 @@ document.addEventListener('DOMContentLoaded', () => {
         URL.revokeObjectURL(url);
     });
 
-    // ランダムに並び替えるボタンのイベントリスナーを追加
     shuffleButton.addEventListener('click', () => {
-        shuffleWords(); // 単語リストをシャッフル
-        renderWords(); // 単語リストを再描画
+        shuffleWords();
+        renderWords();
     });
 
-    // 単語リストをシャッフルする関数
     function shuffleWords() {
         for (let i = words.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
             [words[i], words[j]] = [words[j], words[i]]; // 要素の交換
         }
+    }
+
+    classifyButton.addEventListener('click', () => {
+        classifyWords();
+        renderWords();
+    });
+
+    function classifyWords() {
+        const selectedWords = words.filter(wordObj => wordObj.selected);
+        const unselectedWords = words.filter(wordObj => !wordObj.selected);
+        words = [...selectedWords, ...unselectedWords];
     }
 });

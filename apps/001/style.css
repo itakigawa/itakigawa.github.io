@@ -1,7 +1,15 @@
 /* style.css */
-.tile {
-    background-color: gray;
-    color: blue;
+.tile1 {
+    background-color: rgb(247, 182, 223);
+    color: rgb(255, 0, 111);
+    margin: 10px 0;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.tile2 {
+    background-color: rgb(141, 192, 255);
+    color: rgb(102, 0, 255);
     margin: 10px 0;
     padding: 10px;
     cursor: pointer;
@@ -28,6 +36,6 @@
     }
 
     body {
-        font-size: 18px;
+        font-size: 20px;
     }
 }
