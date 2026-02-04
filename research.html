@@ -1,7 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/base.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/base.dwt" codeOutsideHTMLIsLocked="false" -->
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="keywords" content="瀧川,一学,瀧川一学,Ichigaku,Takigawa" />
     <!-- InstanceBeginEditable name="doctitle" -->
     <title>Ichigaku Takigawa: Research</title>
@@ -44,8 +45,16 @@
       </div>
       <!-- InstanceEndEditable -->
       <!-- InstanceBeginEditable name="main" -->
-      <div id="main">
-        <h3> Machine Learning and Machine Discovery: Methods and Practices</h3>
+      <div id="main" class="single-column">
+        <h3 id="overview"> Machine Learning and Machine Discovery: Methods and Practices</h3>
+        <div class="page-toc">
+          <ul>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#areas">Research Areas</a></li>
+            <li><a href="#topics">Current Topics</a></li>
+            <li><a href="#pubs">Publications</a></li>
+          </ul>
+        </div>
         <div class="item-none">
           <p class="justify">Our research interests primarily focus on two intertwined topics: <strong>(I) Machine learning with discrete structures</strong>, and <strong>(II) Machine discovery in data-centric natural sciences.</strong> Or we are exploring algorithms for "learning" and "discovery" in a principled way, using real-world natural sciences as a compelling testbed.</p>
           <p class="justify">There is no science without data. Reproducibility and evidence are our basic premises. It is the nitty-gritty of every natural science what data are acquired (and how they are acquired) for hypothesis formation and verification. In recent years, we are being pushed to rethink and redefine how to make sense and make use of data as we witnessed the complication of research targets and/or societal requirements, large-scale experimentations and measurements, data/resource sharing via the Internet, and exponential growth in scientific publication with also often facing a reproducibility crisis.</p>
@@ -54,14 +63,14 @@
           <p class="justify"><strong>(II) Machine discovery in data-centric natural sciences.</strong>
           "Statistical learning from examples", the core technology for current "AI", predicts the future as an extension of the experienced past, and thus doesn't fit into the goal of natural sciences pursuing the understanding and discovery of something as-yet-unknown. Furthermore, the current ML is notoriously data-hungry, and requires an astronomical number of diverse training data that can cover all potential variations. This would be not only unrealistic in many labs, but also preposterous because we are not even clear about what potential variations exist and that's mainly why we try ML. In a sharp contrast, scientists have produced many understandings and discoveries from a very limited examples, which should be an ill-posed small-data problem from a statistical viewpoint. Of course, it would be supported by rich contextual information from all the past experiences, but also by the knowledge that is not directly experienced facts or rules (even not in an evolutionary sense; For instance, scientists read textbooks and papers, whereas current AI doesn't at least as they do). So we hypothesize that we need something non-empirical here, and empiricism or data-driven/inductive approach is only a part of the whole. We call it "discrete structures" that include language and logic. Now we also need new principled research on "machine discovery" about the mechanism of how we can reach discovery or understanding from learning. This clearly includes the topic (I) how to incorporate discrete structures in statistical ML and stochastic search, such as knowledge representations and planning by symbols and languages, deductive machineries such as logical inference, numerical simulation, combinatorial optimization, and mathematical symmetry such as spatial geometry on molecules and crystals, and thus (I) and (II) is tightly interlinked. Moreover, the methods developed in (I) can be verified by real-world problems of natural sciences via (II). The methodological research on the themes like (I) or (II) often results in self-contented abstract discussions, and therefore using natural science as a compelling testbed is quite desirable. On top of that, the developed methods in (I) can not only contribute to scientific discovery or understanding, but can also have a positive ripple effect on society and industry such as materials developments and drug discovery.</p>
         </div>
-        <div class="item">
+        <div class="item" id="areas">
           <h3>Research Areas</h3>
           <ul>
             <li>Machine learning</li>
             <li>Machine discovery</li>
           </ul>
         </div>
-        <div class="item">
+        <div class="item" id="topics">
           <h3>Current Research Interests</h3>
           <ul>
             <li>Machine learning with discrete structures
@@ -527,5 +536,6 @@
         </div>
       </div>
       <!-- InstanceEndEditable -->
+  <script src="js/collapsible.js"></script>
   </body>
   <!-- InstanceEnd --></html>
