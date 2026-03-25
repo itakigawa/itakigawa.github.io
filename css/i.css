@@ -54,6 +54,8 @@ table, tr, td {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
+	position: relative;
+	z-index: 20;
 }
 #header li {
 	display: inline-block;
