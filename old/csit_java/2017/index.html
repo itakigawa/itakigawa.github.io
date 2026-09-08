@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -7,7 +8,9 @@
     <h2>オブジェクト指向プログラミング</h2>
 
     <h2>レポートについて</h2>
+    <ul>
       <li>1.3節に「実行結果、解析、考察をレポートにまとめ」と書いてありますが、すべての課題に解析・考察が必要なわけではありません。考えたことを自由に付記してくれたほうがレポートとしては良いですが、「解析せよ、考察せよ」という指定がない課題でも何か言わないといけないということはありません。</li>
+    </ul>
 
     <h2>補足</h2>
     <ul>
@@ -51,7 +54,7 @@ int i = Integer.parseInt(s);
       <li>
 	課題1.9: 入出力については「4.6 標準入力」「付録4」(try-catch構文など)も参考にしてください。ScannerクラスやStringクラスのAPIも併せてチェックしてください。try〜catchした際に、catch部に何も書かれていないと、エラーがわからないので、試行錯誤中は下記のように出たエラーをそのままプリントするようにしておくとデバッグ時に有用かもしれません。<br>
 	try{<br>
-	&nbsp;&nbsp;&nbsp;&nbsp...<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;...<br>
 	}<br>
 	catch(Exception e){<br>
         &nbsp;&nbsp;&nbsp;&nbsp System.err.println("なにかエラーメッセージをここに") ;<br>
@@ -79,7 +82,7 @@ int i = Integer.parseInt(s);
       <li>
 	課題1.12: ここでは、クラスJankenPlayerとNameAvailableを両方とも継承(多重継承)したいわけですが、javaでは多重継承そのものはできないため、クラスJankenPlayerを継承しNameAvailableインタフェースも実装する形で分けて実現します。インタフェースは複数実装できるので例えば下記のようになります (なお実はJava8ではInterfaceが実装を持てるようになり事情がややこしくなっていますがここでは気にしなくて構いません)<br>
 	class MyCustomJankenPlayer extends JankenPlayer implements NameAvailable, MyInterface1, MyInterface2, MyInterface3 {<br>
-	&nbsp;&nbsp;&nbsp;&nbsp...<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;...<br>
 }
       </li>
       <li>
